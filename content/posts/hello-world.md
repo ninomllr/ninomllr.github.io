@@ -6,4 +6,6 @@ draft: false
 
 # Hello World
 
-This is my way of trying to do some blogging.
+Hi, My name is Nino Müller! 👋
+
+I am a Data Engineer, Software Developer and Entrepreneur in Switzerland working for [Substring - The Data Company](https://substring.ch). This is my personal blog project to write down some of my learnings and projects around #dataengineering #softwaredevelopment #mlops #opensource #elt #dwh and many more data and software topics. Not sure what else I will blog about, let's see.
