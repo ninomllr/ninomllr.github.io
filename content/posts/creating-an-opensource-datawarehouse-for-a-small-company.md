@@ -12,7 +12,7 @@ Our stack for this data warehouse is quite simple:
 
 ## Data Ingestion
 
-[Meltano](https://meltano.com)
+[Meltano](https://meltano.com) has made Data ingestion for many SaaS applications a hell lot easier. What I personally like a lot about it, is the fact that installation and configuration is basically a no brainer and it works perfectly well on the console, K8s, in pipelines or whatever orchestrator you wish to use. Meltano originated at Gitlab and has a super helpful community. Basically it's a wrapper for [Singer.io](https://singer.io) taps which is a great open source project by itself and it offers connectors to many of the tools that we want data from already.
 
 ## Data Persistence
 
@@ -20,16 +20,16 @@ While [PostgreSQL](https://www.postgresql.org/) might not be the classical choic
 
 ## Data Transformation
 
-[dbt](https://getdbt.com)
+We are looking for a Headless BI approach where all the metrics are already pre-calculated in the DWH. One of the best tools to create reliable and reusable SQL code is  [dbt](https://getdbt.com) which allows us to build models for various different sources, outputs, metrics and more. Everything is run over the command line and can thus be scheduled with Gitlab CI easily. What I like about dbt is the additional features like data quality tests, seeding, snapshots and more that we can use un the future.
 
 ## Data Visualisation
 
-[Superset](https://superset.apache.org)
+I was quite unsure if we should go with [Apache Superset](https://superset.apache.org) or Metabase on this one, as I like both. I decided to use Superset, because it feels like it offers a bit more features. I think one of the main reasons why Metabase is awesome is that it helps you to create reports even if you don't know SQL. As we are a team full of data engineers I don't think not knowing SQL will ever be a problem for us.
 
 ## Job Orchestrator
 
-[Gitlab](https://gitlab.org)
-[microk8s](https://microk8s.org)
+The whole data pipeline code is hosted on [Gitlab](https://gitlab.org), which is able to run K8s pods through Gitlab Runners running on our
+[microk8s](https://microk8s.org) Cluster. This means we can just configure Gitlab CI to schedule our ingestion and transformation pipeline.
 
 # Setting up the ingestion
 
