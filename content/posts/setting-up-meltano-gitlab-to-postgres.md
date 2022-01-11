@@ -1,7 +1,7 @@
 ---
-title: 'Setting Up Meltano Gitlab to Postgres'
-date: 2022-01-11T17:51:02+01:00
+date: "2022-01-11T17:51:02+01:00"
 draft: true
+title: Setting Up Meltano Gitlab to Postgres
 ---
 
 # Setting up the ingestion

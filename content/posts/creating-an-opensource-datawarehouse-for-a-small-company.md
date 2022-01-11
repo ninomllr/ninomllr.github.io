@@ -1,7 +1,7 @@
 ---
-title: 'Creating an Opensource Datawarehouse for a Small Company'
-date: 2022-01-11T18:23:14+01:00
+date: "2022-01-11T18:23:14+01:00"
 draft: false
+title: Creating an Opensource Datawarehouse for a Small Company
 ---
 
 In my company [Substring - The Data Company](https://substring.ch) we decided to become more data-driven and wanted to set up a simple data warehouse for our every day business. We decided to set up everything with open source software and wanted to host it in our own Kubernetes cluster.

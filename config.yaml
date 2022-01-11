@@ -1,0 +1,6 @@
+baseURL: 'https://ninomueller.com'
+languageCode: 'en-us'
+title: 'Nino Müller Dataverse'
+theme: "PaperMod"
+params:
+  comments: true

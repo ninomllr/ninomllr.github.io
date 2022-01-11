@@ -1,7 +1,7 @@
 ---
-title: 'Writing a Meltano Tap'
-date: 2022-01-05T22:25:52+01:00
+date: "2022-01-05T22:25:52+01:00"
 draft: true
+title: Writing a Meltano Tap
 ---
 
 If you have read my older posts already, you will know that we at [Substring - The Data Company](https://substring.ch) decided to become more data-driven and wanted to set up a simple data warehouse for our every day business. If you want to know how our [open source data warehouse](posts/creating-an-opensource-datawarehouse-for-a-small-company) looks like check out my other post about it.
