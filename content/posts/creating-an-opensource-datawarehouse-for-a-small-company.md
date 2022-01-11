@@ -20,7 +20,7 @@ While [PostgreSQL](https://www.postgresql.org/) might not be the classical choic
 
 ## Data Transformation
 
-We are looking for a Headless BI approach where all the metrics are already pre-calculated in the DWH. One of the best tools to create reliable and reusable SQL code is  [dbt](https://getdbt.com) which allows us to build models for various different sources, outputs, metrics and more. Everything is run over the command line and can thus be scheduled with Gitlab CI easily. What I like about dbt is the additional features like data quality tests, seeding, snapshots and more that we can use un the future.
+We are looking for a Headless BI approach where all the metrics are already pre-calculated in the DWH. One of the best tools to create reliable and reusable SQL code is [dbt](https://getdbt.com) which allows us to build models for various different sources, outputs, metrics and more. Everything is run over the command line and can thus be scheduled with Gitlab CI easily. What I like about dbt is the additional features like data quality tests, seeding, snapshots and more that we can use un the future.
 
 ## Data Visualisation
 
@@ -31,7 +31,26 @@ I was quite unsure if we should go with [Apache Superset](https://superset.apach
 The whole data pipeline code is hosted on [Gitlab](https://gitlab.org), which is able to run K8s pods through Gitlab Runners running on our
 [microk8s](https://microk8s.org) Cluster. This means we can just configure Gitlab CI to schedule our ingestion and transformation pipeline.
 
+So for the upcoming example I show you how we added Gitlab commits to our data pipeline.
+
 # Setting up the ingestion
+
+First we setup Meltano
+
+```
+# Create and activate virtual environment, and update pip
+python3 -m venv .venv
+source .venv/bin/activate
+pip3 install pip --upgrade
+
+# Install Meltano
+pip3 install meltano
+
+# Initialize a new Meltano project
+meltano init demo-project
+```
+
+Now you can check out your project in Visual Studio code or any other editor that you like.
 
 # Setting up the data transformation
 
