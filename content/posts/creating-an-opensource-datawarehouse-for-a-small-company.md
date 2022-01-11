@@ -1,7 +1,7 @@
 ---
 title: 'Creating an Opensource Datawarehouse for a Small Company'
-date: 2022-01-05T22:42:14+01:00
-draft: true
+date: 2022-01-11T18:23:14+01:00
+draft: false
 ---
 
 In my company [Substring - The Data Company](https://substring.ch) we decided to become more data-driven and wanted to set up a simple data warehouse for our every day business. We decided to set up everything with open source software and wanted to host it in our own Kubernetes cluster.
@@ -9,6 +9,7 @@ In my company [Substring - The Data Company](https://substring.ch) we decided to
 # Open source DWH stack
 
 Our stack for this data warehouse is quite simple:
+![Open source DWH stack](/data-warehouse-architecture.drawio.png)
 
 ## Data Ingestion
 
@@ -31,27 +32,12 @@ I was quite unsure if we should go with [Apache Superset](https://superset.apach
 The whole data pipeline code is hosted on [Gitlab](https://gitlab.org), which is able to run K8s pods through Gitlab Runners running on our
 [microk8s](https://microk8s.org) Cluster. This means we can just configure Gitlab CI to schedule our ingestion and transformation pipeline.
 
-So for the upcoming example I show you how we added Gitlab commits to our data pipeline.
+# About this series
 
-# Setting up the ingestion
+So in this series of short blog posts I will walk you through all the necessary steps to create your own minimal Headless BI and how we added [Gitlab](https://github.com/MeltanoLabs/tap-gitlab) and [Bexio](https://github.com/substringgmbh/bexio.net) data to our pipeline, how we transform it and how to display it in Apache Superset. Oh and obviously on how to write your own Meltano tap, as we had to create our own loader for Bexio.
 
-First we setup Meltano
-
-```
-# Create and activate virtual environment, and update pip
-python3 -m venv .venv
-source .venv/bin/activate
-pip3 install pip --upgrade
-
-# Install Meltano
-pip3 install meltano
-
-# Initialize a new Meltano project
-meltano init demo-project
-```
-
-Now you can check out your project in Visual Studio code or any other editor that you like.
-
-# Setting up the data transformation
-
-# Running the pipelines regularly
+- Setting up the data ingestion (upcoming)
+- Setting up the data transformation (upcoming)
+- Running the data pipelines regularly (upcoming)
+- Writing your own Meltano Tap (upcoming)
+- Creating a visualization layer with Apache Superset (upcoming)
